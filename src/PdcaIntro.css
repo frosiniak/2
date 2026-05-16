@@ -1,0 +1,191 @@
+/* ===== Вступна сторінка PDCA ===== */
+
+.pdca-page {
+  padding: 24px 12px 32px;
+  display: flex;
+  justify-content: center;
+}
+
+.pdca-card {
+  max-width: 900px;
+  width: 100%;
+  background: #ffffff;
+  padding: 22px 20px 26px;
+  border-radius: 16px;
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.45);
+}
+
+/* Верхня кнопка «Назад» */
+.pdca-back-top {
+  background: none;
+  border: none;
+  color: #2563eb;
+  font-size: 14px;
+  padding: 0;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.pdca-back-top:hover {
+  text-decoration: underline;
+}
+
+.pdca-title {
+  text-align: center;
+  font-size: 26px;
+  font-weight: 700;
+  margin: 4px 0 18px;
+  color: #111827;
+}
+
+.pdca-text {
+  text-align: justify;
+  font-size: 16px;
+  line-height: 1.7;
+  margin: 0 0 14px;
+  color: #111827;
+}
+
+/* Головна схема циклу PDCA */
+.pdca-image-full {
+  width: 100%;
+  max-width: 760px;
+  display: block;
+  margin: 20px auto;
+  border-radius: 12px;
+}
+
+/* Блок з цитатою і фото Демінга */
+.pdca-quote-block {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.pdca-quote-image-wrap {
+  flex: 0 0 auto;
+}
+
+.pdca-image-side {
+  width: 100%;
+  max-width: 260px;
+  border-radius: 12px;
+  display: block;
+}
+
+/* Текст цитати */
+.pdca-quote-text {
+  margin: 0;
+}
+
+/* Нижня кнопка переходу до тренажера */
+.pdca-actions {
+  margin-top: 26px;
+  text-align: center;
+}
+
+.pdca-start-btn {
+  background: #1e40af;
+  color: white;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.pdca-start-btn:hover {
+  background: #1d4ed8;
+}
+
+/* Адаптивність під десктопи для блоку цитати */
+@media (min-width: 640px) {
+  .pdca-quote-block {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  .pdca-image-side {
+    width: 160px;
+  }
+/* Контейнер верхніх міні-кнопок */
+.pdca-top-cases-container {
+  display: flex;
+  gap: 6px;
+}
+
+.pdca-case-mini-btn {
+  padding: 6px 12px;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: 6px;
+  border: 1px solid #cbd5e1;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.pdca-case-mini-btn.active {
+  background: #1e40af;
+  color: white;
+  border-color: #1e40af;
+}
+
+.pdca-case-mini-btn.disabled {
+  background: #f1f5f9;
+  color: #94a3b8;
+  cursor: not-allowed;
+}
+
+/* Контейнер нижніх великих кнопок */
+.pdca-bottom-actions-container {
+  margin-top: 32px;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.pdca-large-case-btn {
+  padding: 12px 24px;
+  font-size: 15px;
+  font-weight: 700;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  min-width: 200px;
+  transition: transform 0.1s, background 0.2s;
+}
+
+.pdca-large-case-btn:active {
+  transform: scale(0.98);
+}
+
+.pdca-large-case-btn.primary {
+  background: #1e40af;
+  color: white;
+  box-shadow: 0 4px 12px rgba(30, 64, 175, 0.2);
+}
+
+.pdca-large-case-btn.primary:hover {
+  background: #1d4ed8;
+}
+
+.pdca-large-case-btn.secondary {
+  background: #e2e8f0;
+  color: #64748b;
+  cursor: not-allowed;
+}
+
+@media (max-width: 640px) {
+  .pdca-bottom-actions-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .pdca-large-case-btn {
+    width: 100%;
+  }
+}
+
+}

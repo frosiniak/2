@@ -1,0 +1,36 @@
+/* ===== FOOTER ===== */
+
+.site-footer {
+  background: #0f172a;
+  padding: 26px 0;
+  margin-top: 40px;
+  border-top: 2px solid #1e3a8a;
+}
+
+.footer-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 16px;
+
+  text-align: center;
+
+  color: #e2e8f0;
+  font-family: "Roboto", sans-serif;
+}
+
+.footer-title {
+  font-size: 17px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.footer-sub {
+  font-size: 15px;
+  opacity: 0.9;
+}
+
+.footer-copy {
+  margin-top: 12px;
+  font-size: 14px;
+  color: #94a3b8;
+}

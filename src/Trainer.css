@@ -1,0 +1,297 @@
+/* =======================================
+   ГОЛОВНА СТОРІНКА / ШАПКА DONDUVS
+======================================= */
+
+header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  background: #0f172a;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  box-sizing: border-box;
+}
+
+header img {
+  height: 50px;
+  width: auto;
+}
+
+.header-title-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.header-title {
+  font-size: 18px;
+  line-height: 1.25;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+}
+
+.header-subtitle {
+  font-size: 12px;
+  line-height: 1.25;
+  color: #cbd5e1;
+  margin-top: 2px;
+}
+
+/* Мобільна адаптація */
+@media (max-width: 600px) {
+  header {
+    padding: 10px 14px;
+  }
+
+  header img {
+    height: 42px;
+  }
+
+  .header-title {
+    font-size: 15px;
+  }
+
+  .header-subtitle {
+    font-size: 11px;
+  }
+}
+
+/* ======================================
+   ВСТУПНИЙ БЛОК SIMDEC (головна)
+====================================== */
+
+.trainer-intro-wrapper {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px 16px;
+}
+
+.trainer-intro-card {
+  background: rgba(15, 23, 42, 0.96);
+  color: #e5e7eb;
+  border-radius: 16px;
+  padding: 20px 18px 22px;
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.75);
+  border: 1px solid rgba(148, 163, 184, 0.55);
+  text-align: left;
+  font-family: "Roboto", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+}
+
+.trainer-intro-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0 0 10px;
+}
+
+.trainer-intro-text {
+  margin: 6px 0;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.trainer-intro-emphasis {
+  margin-top: 10px;
+  font-weight: 600;
+}
+
+.trainer-intro-confidential {
+  margin-top: 8px;
+  font-size: 12px;
+  opacity: 0.85;
+}
+
+/* Форма вводу */
+.trainer-intro-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.trainer-intro-input {
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  background: #ffffff;
+  color: #111827;
+  font-size: 14px;
+}
+
+.trainer-intro-input::placeholder {
+  color: #6b7280;
+}
+
+.trainer-start-btn {
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: none;
+  background: #1e40af;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: center;
+  white-space: nowrap;
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .trainer-intro-form {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .trainer-intro-input {
+    flex: 1;
+  }
+
+  .trainer-start-btn {
+    width: auto;
+    flex-shrink: 0;
+  }
+}
+
+/* ======================================
+   БЛОК ВИБОРУ МОДЕЛІ (PDCA / OODA / SDCA)
+====================================== */
+
+.model-card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.model-card {
+  background: #f9fafb;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+}
+
+.model-title {
+  text-align: center;
+  margin-bottom: 8px;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.model-text {
+  font-size: 14px;
+  line-height: 1.45;
+  text-align: justify;
+  margin-bottom: 12px;
+}
+
+.model-btn {
+  width: 100%;
+  padding: 10px 14px;
+  background: #1e40af;
+  border-radius: 10px;
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+}
+
+/* Мобільна адаптація */
+@media (max-width: 700px) {
+  .model-card-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ======================================
+   СЦЕНАРІЇ OODA / PDCA / SDCA
+====================================== */
+
+.scenario-card {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 22px 20px 26px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.08);
+}
+
+.scenario-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.scenario-description {
+  font-size: 14px;
+  line-height: 1.55;
+  text-align: justify;
+  margin-bottom: 12px;
+}
+
+.scenario-options {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.scenario-option-btn {
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: none;
+  color: white;
+  background: #1e40af;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: left;
+  line-height: 1.45;
+}
+
+.scenario-option-btn:disabled {
+  opacity: 0.65;
+}
+
+.feedback-box-success {
+  margin-top: 14px;
+  padding: 12px;
+  border-radius: 10px;
+  background: #d1fae5;
+  color: #065f46;
+  border: 1px solid #10b981;
+}
+
+.feedback-box-fail {
+  margin-top: 14px;
+  padding: 12px;
+  border-radius: 10px;
+  background: #fee2e2;
+  color: #991b1b;
+  border: 1px solid #ef4444;
+}
+
+.scenario-next-btn {
+  margin-top: 14px;
+  width: auto;
+  padding: 10px 18px;
+  background: #16a34a;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.scenario-image {
+  margin: 22px auto 0;
+  width: 70%;
+  display: block;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+@media (max-width: 640px) {
+  .scenario-image {
+    width: 90%;
+  }
+}

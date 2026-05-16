@@ -1,0 +1,181 @@
+/* ===== Вступна сторінка SDCA ===== */
+
+.sdca-page {
+  padding: 24px 12px 32px;
+  display: flex;
+  justify-content: center;
+}
+
+.sdca-card {
+  max-width: 900px;
+  width: 100%;
+  background: #ffffff;
+  padding: 22px 20px 26px;
+  border-radius: 16px;
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.45);
+}
+
+/* Верхня кнопка «Назад» */
+.sdca-back-top {
+  background: none;
+  border: none;
+  color: #2563eb;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 6px 12px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.sdca-back-top:hover {
+  opacity: 0.8;
+  text-decoration: underline;
+}
+
+.sdca-title {
+  text-align: center;
+  font-size: 26px;
+  font-weight: 700;
+  margin: 4px 0 18px;
+  color: #111827;
+}
+
+.sdca-subtitle {
+  color: #111827;
+  font-weight: 700;
+}
+
+.sdca-text {
+  text-align: justify;
+  font-size: 16px;
+  line-height: 1.7;
+  margin: 0 0 14px;
+  color: #111827;
+}
+
+/* Головна схема циклу SDCA — ОБМЕЖЕНО РОЗМІРИ ДЛЯ ОРГАНІЧНОГО ВИГЛЯДУ */
+.sdca-image-full {
+  width: 100%;
+  max-width: 480px;        /* ← Оптимальний розмір, щоб малюнок не був занадто великим */
+  display: block;
+  margin: 24px auto;       /* ← Центрування та відступи зверху/знизу */
+  border-radius: 10px;     /* ← М'яке закруглення кутів */
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06); /* ← Легка акуратна тінь */
+}
+
+/* Блок з цитатою і фото Генрі Форда */
+.sdca-quote-block {
+  margin-top: 25px;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  background: #f8fafc;
+  padding: 16px;
+  border-radius: 12px;
+  border-left: 4px solid #3b82f6;
+}
+
+.sdca-quote-image-wrap {
+  flex: 0 0 120px;
+}
+
+.sdca-image-side {
+  width: 100%;
+  max-width: 120px;
+  border-radius: 8px;
+  display: block;
+  object-fit: cover;
+}
+
+.sdca-quote-text {
+  margin: 0;
+}
+
+/* СТИЛІ КНОПОК ДЛЯ СИСТЕМИ МІКРОКРОКІВ */
+
+/* Контейнер верхніх міні-кнопок */
+.sdca-top-cases-container {
+  display: flex;
+  gap: 6px;
+}
+
+.sdca-case-mini-btn {
+  padding: 6px 12px;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: 6px;
+  border: 1px solid #cbd5e1;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.sdca-case-mini-btn.active {
+  background: #1e40af;
+  color: white;
+  border-color: #1e40af;
+}
+
+.sdca-case-mini-btn.disabled {
+  background: #f1f5f9;
+  color: #94a3b8;
+  cursor: not-allowed;
+}
+
+/* Контейнер нижніх великих кнопок */
+.sdca-bottom-actions-container {
+  margin-top: 32px;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.sdca-large-case-btn {
+  padding: 12px 24px;
+  font-size: 15px;
+  font-weight: 700;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  min-width: 200px;
+  transition: transform 0.1s, background 0.2s;
+}
+
+.sdca-large-case-btn:active {
+  transform: scale(0.98);
+}
+
+.sdca-large-case-btn.primary {
+  background: #1e40af;
+  color: white;
+  box-shadow: 0 4px 12px rgba(30, 64, 175, 0.2);
+}
+
+.sdca-large-case-btn.primary:hover {
+  background: #1d4ed8;
+}
+
+.sdca-large-case-btn.secondary {
+  background: #e2e8f0;
+  color: #64748b;
+  cursor: not-allowed;
+}
+
+/* Адаптація під мобільні пристрої */
+@media (max-width: 640px) {
+  .sdca-quote-block {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .sdca-bottom-actions-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .sdca-large-case-btn {
+    width: 100%;
+  }
+  .sdca-image-full {
+    max-width: 100%; /* На мобільних займає всю доступну ширину картки */
+  }
+}

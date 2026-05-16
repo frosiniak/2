@@ -1,0 +1,42 @@
+
+.site-header {
+  background: #0f172a;
+  padding: 14px 0;
+  border-bottom: 2px solid #1e3a8a;
+}
+
+.header-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.header-logo {
+  width: 52px;
+  height: 52px;
+}
+
+.header-text-block {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.header-title {
+  font-family: "Proba Nav", "Roboto", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 0.3px;
+}
+
+.header-subtitle {
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  color: #cbd5e1;
+  margin-top: 3px;
+}

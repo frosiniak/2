@@ -2,7 +2,7 @@
   "name": "decision-trainer",
   "version": "1.2.0",
   "private": true,
-  "homepage": "https://frosiniak.github.io/1",
+  "homepage": "https://frosiniak.github.io/2",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
@@ -40,6 +40,6 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^6.1.1"
+    "gh-pages": "^6.3.0"
   }
 }

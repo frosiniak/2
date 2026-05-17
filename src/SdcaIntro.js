@@ -4,7 +4,7 @@ import "./SdcaIntro.css";
 import sdcaImage from "./assets/sdca/sdca.png"; 
 import fordImage from "./assets/sdca/ford.png"; 
 
-export default function SdcaIntro({ onStart, onBack }) {
+export default function SdcaIntro({ onStart, onBack, currentCase = 1 }) {
   return (
     <div className="sdca-page">
       <div className="sdca-card">
@@ -16,45 +16,45 @@ export default function SdcaIntro({ onStart, onBack }) {
           </button>
 
           <div className="sdca-top-cases-container">
-            <button className="sdca-case-mini-btn active" onClick={onStart}>
-              Кейс 1
-            </button>
-            <button className="sdca-case-mini-btn disabled" onClick={() => alert("Кейс 2 в розробці")}>
-              Кейс 2
-            </button>
-            <button className="sdca-case-mini-btn disabled" onClick={() => alert("Кейс 3 в розробці")}>
-              Кейс 3
-            </button>
-          </div>
+  <button 
+    className="sdca-case-mini-btn" 
+    onClick={() => onStart(1)}
+  >
+    Кейс 1
+  </button>
+  <button 
+    className="sdca-case-mini-btn" 
+    onClick={() => onStart(2)}
+  >
+    Кейс 2
+  </button>
+  <button 
+    className="sdca-case-mini-btn" 
+    onClick={() => onStart(3)}
+  >
+    Кейс 3
+  </button>
+</div>
         </div>
 
         <h1 className="sdca-title">Цикл Standardize — Do — Check — Act (SDCA)</h1>
 
         {/* Вступ */}
         <p className="sdca-text">
-          Цикл <b>SDCA</b> — це модель управління стабільністю та підтриманням стандартів, що виникла як логічне продовження PDCA. Він використовується для забезпечення стабільної ефективності процесів, уникнення деградації якості та підтримки досягнутих результатів на високому рівні.
-          Для керівників органів МВС SDCA є інструментом підтримання базової дисципліни та стійкості роботи в умовах високих навантажень.
+          Цикл <b>SDCA</b> (Standardize-Do-Check-Act / Стандартизувати-Виконати-Перевірити-Діяти) застосовується тоді, коли процес уже оптимізовано (наприклад, за допомогою PDCA), і головне завдання керівника — стабілізувати ситуацію, закріпити успіх та підтримувати стандарти на високому рівні.
         </p>
-
-        {/* Головна ілюстрація циклу — тепер з обмеженим адаптивним розміром */}
-        <img src={sdcaImage} alt="Схема циклу SDCA" className="sdca-image-full" />
-
-        <h2 className="sdca-subtitle" style={{ fontSize: 20, fontWeight: 700, margin: "22px 0 8px" }}>
-          Приклад застосування SDCA в роботі поліції
-        </h2>
-
         <p className="sdca-text">
-          Уявімо ситуацію: керівник закріплює успішно реформований процес реагування екіпажів у місті. SDCA діє так:
+          Для керівника правоохоронного органу це інструмент системного контролю, який запобігає поверненню підрозділу до старих помилок і хаосу. Таким чином SDCA допомагає підтримувати високий уровень організаційної роботи, запобігаючи відкату до менш ефективних практик.
         </p>
 
-        <p className="sdca-text"><strong>Standardize:</strong> чітко прописую новий алгоритм дій чергового та маршрути патрульних екіпажів.</p>
-        <p className="sdca-text"><strong>Do:</strong> підрозділи працюють за новими стандартами щодня, не відходячи від алгоритму.</p>
-        <p className="sdca-text"><strong>Check:</strong> щотижня аналізую статистику реагування та відповідність маршруту встановленим нормам.</p>
-        <p className="sdca-text"><strong>Act:</strong> за результатами перевірки вношу дрібні корекції, закріплюючи стабільність досягнутого рівня ефективності.</p>
-
-        <p className="sdca-text">
-          Таким чином SDCA допомагає підтримувати високий рівень організаційної роботи, запобігаючи відкату до менш ефективних практик.
-        </p>
+        {/* ПРИКЛАД В РОБОЦІ ПОЛІЦІЇ — ПОВНІСТЮ ВІДНОВЛЕНО */}
+        <h2 className="sdca-subtitle">Приклад застосування SDCA в роботі поліції:</h2>
+        <ul className="sdca-text" style={{ paddingLeft: "20px", marginBottom: "20px" }}>
+          <li><b>Standardize (Стандартизувати):</b> затвердження чіткої інструкції або регламенту (наприклад, графік патрулювання, алгоритм реагування на виклик).</li>
+          <li><b>Do (Виконати):</b> робота суворо за інструкцією, ознайомлення всього особового складу з новими правилами.</li>
+          <li><b>Check (Перевірити):</b> моніторинг дотримання стандарту (через GPS-трекери, бодікамери, аналіз логів системи чи перевірки чергової частини).</li>
+          <li><b>Act (Діяти):</b> реагування на відхилення. Якщо хтось порушує — провести навчання або заблокувати технічну можливість порушення. Якщо стандарт застарів — ініціювати його оновлення.</li>
+        </ul>
 
         {/* Блок із цитатою Генрі Форда */}
         <div className="sdca-quote-block">
@@ -73,16 +73,16 @@ export default function SdcaIntro({ onStart, onBack }) {
           </p>
         </div>
 
-        {/* Нижня панель дій з великими кнопками */}
+        {/* Нижня панель дій з великими кнопками — ПОВНІСТЮ АКТИВОВАНО */}
         <div className="sdca-bottom-actions-container">
-          <button className="sdca-large-case-btn primary" onClick={onStart}>
-            Кейс 1: Стабільність процесів
+          <button className="sdca-large-case-btn primary" onClick={() => onStart(1)}>
+            Кейс 1: Забезпечення невідлучності патрулів
           </button>
-          <button className="sdca-large-case-btn secondary" onClick={() => alert("Кейс 2 в розробці")}>
-            Кейс 2: В розробці
+          <button className="sdca-large-case-btn primary" onClick={() => onStart(2)}>
+            Кейс 2: Дотримання гендерного балансу
           </button>
-          <button className="sdca-large-case-btn secondary" onClick={() => alert("Кейс 3 в розробці")}>
-            Кейс 3: В розробці
+          <button className="sdca-large-case-btn primary" onClick={() => onStart(3)}>
+            Кейс 3: Дотримання регламенту ІТ-безпеки
           </button>
         </div>
 

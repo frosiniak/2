@@ -1,10 +1,14 @@
 import React, { useMemo, useState } from "react";
 
-import pdca from "./scenarios/pdca.json";
+import pdca1 from "./scenarios/pdca1.json";
+import pdca2 from "./scenarios/pdca2.json";
+import pdca3 from "./scenarios/pdca3.json";
 import ooda1 from "./scenarios/ooda1.json";
 import ooda2 from "./scenarios/ooda2.json";
 import ooda3 from "./scenarios/ooda3.json";
-import sdca from "./scenarios/sdca.json";
+import sdca1 from "./scenarios/sdca1.json";
+import sdca2 from "./scenarios/sdca2.json";
+import sdca3 from "./scenarios/sdca3.json";
 
 import OodaIntro from "./OodaIntro";
 import PdcaIntro from "./PdcaIntro";
@@ -33,11 +37,23 @@ export default function Trainer() {
       2: ooda2,
       3: ooda3,
     };
+// Інтеграція нових карт сценаріїв для PDCA
+    const pdcaMap = {
+      1: pdca1,
+      2: pdca2,
+      3: pdca3,
+    };
 
+    // Інтеграція нових карт сценаріїв для SDCA
+    const sdcaMap = {
+      1: sdca1,
+      2: sdca2,
+      3: sdca3,
+    };
     const map = {
-      PDCA: pdca,
+      PDCA: pdcaMap[currentCase] || pdca1,
       OODA: oodaMap[currentCase] || ooda1,
-      SDCA: sdca,
+      SDCA: sdcaMap[currentCase] || sdca1,
     };
     return model ? map[model] || [] : [];
   }, [model, currentCase]);
@@ -266,7 +282,10 @@ export default function Trainer() {
   if (model === "PDCA" && showPdcaIntro) {
     return (
       <PdcaIntro
-        onStart={() => setShowPdcaIntro(false)}
+        onStart={(caseId) => {
+          setCurrentCase(caseId);
+          setShowPdcaIntro(false);
+        }}
         onBack={() => {
           setShowPdcaIntro(false);
           setModel(null);
@@ -278,7 +297,10 @@ export default function Trainer() {
   if (model === "SDCA" && showSdcaIntro) {
     return (
       <SdcaIntro
-        onStart={() => setShowSdcaIntro(false)}
+        onStart={(caseId) => {
+          setCurrentCase(caseId);
+          setShowSdcaIntro(false);
+        }}
         onBack={() => {
           setShowSdcaIntro(false);
           setModel(null);

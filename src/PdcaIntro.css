@@ -4,188 +4,182 @@
   padding: 24px 12px 32px;
   display: flex;
   justify-content: center;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
 .pdca-card {
   max-width: 900px;
   width: 100%;
   background: #ffffff;
-  padding: 22px 20px 26px;
+  padding: 24px 20px 28px;
   border-radius: 16px;
-  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.45);
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.15);
 }
 
-/* Верхня кнопка «Назад» */
+/* Верхній бар навігації */
+.pdca-top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
 .pdca-back-top {
   background: none;
   border: none;
   color: #2563eb;
-  font-size: 14px;
-  padding: 0;
-  margin-bottom: 10px;
+  font-size: 15px;
+  font-weight: 600;
   cursor: pointer;
+  padding: 4px 8px;
+  transition: opacity 0.2s;
 }
 
 .pdca-back-top:hover {
+  opacity: 0.7;
   text-decoration: underline;
 }
 
-.pdca-title {
-  text-align: center;
-  font-size: 26px;
-  font-weight: 700;
-  margin: 4px 0 18px;
-  color: #111827;
-}
-
-.pdca-text {
-  text-align: justify;
-  font-size: 16px;
-  line-height: 1.7;
-  margin: 0 0 14px;
-  color: #111827;
-}
-
-/* Головна схема циклу PDCA */
-.pdca-image-full {
-  width: 100%;
-  max-width: 760px;
-  display: block;
-  margin: 20px auto;
-  border-radius: 12px;
-}
-
-/* Блок з цитатою і фото Демінга */
-.pdca-quote-block {
-  margin-top: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.pdca-quote-image-wrap {
-  flex: 0 0 auto;
-}
-
-.pdca-image-side {
-  width: 100%;
-  max-width: 260px;
-  border-radius: 12px;
-  display: block;
-}
-
-/* Текст цитати */
-.pdca-quote-text {
-  margin: 0;
-}
-
-/* Нижня кнопка переходу до тренажера */
-.pdca-actions {
-  margin-top: 26px;
-  text-align: center;
-}
-
-.pdca-start-btn {
-  background: #1e40af;
-  color: white;
-  border: none;
-  padding: 12px 28px;
-  border-radius: 10px;
-  font-size: 16px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background 0.2s ease;
-}
-
-.pdca-start-btn:hover {
-  background: #1d4ed8;
-}
-
-/* Адаптивність під десктопи для блоку цитати */
-@media (min-width: 640px) {
-  .pdca-quote-block {
-    flex-direction: row;
-    align-items: flex-start;
-  }
-  .pdca-image-side {
-    width: 160px;
-  }
-/* Контейнер верхніх міні-кнопок */
+/* Верхні мікро-кнопки */
 .pdca-top-cases-container {
   display: flex;
-  gap: 6px;
+  gap: 8px;
 }
 
 .pdca-case-mini-btn {
-  padding: 6px 12px;
+  padding: 6px 14px;
   font-size: 13px;
   font-weight: 600;
   border-radius: 6px;
-  border: 1px solid #cbd5e1;
+  border: 1px solid #e2e8f0;
+  background-color: #f8fafc;
+  color: #475569;
   cursor: pointer;
   transition: all 0.2s;
 }
 
-.pdca-case-mini-btn.active {
-  background: #1e40af;
-  color: white;
-  border-color: #1e40af;
+.pdca-case-mini-btn:hover {
+  background-color: #f1f5f9;
+  border-color: #cbd5e1;
 }
 
-.pdca-case-mini-btn.disabled {
-  background: #f1f5f9;
-  color: #94a3b8;
-  cursor: not-allowed;
+.pdca-title {
+  font-size: 24px;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0 0 16px 0;
+  text-align: center;
+  line-height: 1.3;
 }
 
-/* Контейнер нижніх великих кнопок */
-.pdca-bottom-actions-container {
-  margin-top: 32px;
+.pdca-subtitle {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 24px 0 12px 0;
+}
+
+.pdca-text {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #334155;
+  margin: 0 0 16px 0;
+  text-align: justify;
+}
+
+/* МОДИФІКАЦІЯ 1: Контейнер та стилі для вирівнювання діаграми на всю ширину текстового поля */
+.pdca-main-image-container {
+  width: 100%;
   display: flex;
   justify-content: center;
-  gap: 16px;
-  flex-wrap: wrap;
+  margin: 20px 0 24px 0;
+}
+
+.pdca-main-image-fullwidth {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(15, 23, 42, 0.08);
+}
+
+/* Блок цитати Демінга */
+.pdca-quote-block {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background-color: #f8fafc;
+  border-left: 4px solid #1e40af;
+  padding: 18px;
+  border-radius: 0 12px 12px 0;
+  margin: 28px 0;
+}
+
+.pdca-quote-image-wrap {
+  flex-shrink: 0;
+}
+
+.pdca-image-side {
+  width: 120px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  object-fit: cover;
+}
+
+.pdca-quote-text {
+  margin: 0;
+  font-size: 15px;
+  text-align: left;
+}
+
+/* Нижні великі кнопки — стильний вертикальний стек */
+.pdca-bottom-actions-container {
+  margin-top: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
 .pdca-large-case-btn {
-  padding: 12px 24px;
+  width: 100%;
+  padding: 14px 20px;
   font-size: 15px;
-  font-weight: 700;
-  border-radius: 10px;
+  font-weight: 600;
+  color: #ffffff;
   border: none;
+  border-radius: 8px;
   cursor: pointer;
-  min-width: 200px;
-  transition: transform 0.1s, background 0.2s;
+  text-align: left;
+  transition: transform 0.1s, filter 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
-.pdca-large-case-btn:active {
-  transform: scale(0.98);
+/* МОДИФІКАЦІЯ 2: Уніфікований колір для абсолютно всіх кнопок за зразком Кейсу 1 */
+.pdca-large-case-btn.pdca-btn-uniform {
+  background-color: #1e40af; /* Королівський синій колір Кейсу 1 */
 }
 
-.pdca-large-case-btn.primary {
-  background: #1e40af;
-  color: white;
+.pdca-large-case-btn:hover {
+  filter: brightness(1.1);
   box-shadow: 0 4px 12px rgba(30, 64, 175, 0.2);
 }
 
-.pdca-large-case-btn.primary:hover {
-  background: #1d4ed8;
+.pdca-large-case-btn:active {
+  transform: scale(0.995);
 }
 
-.pdca-large-case-btn.secondary {
-  background: #e2e8f0;
-  color: #64748b;
-  cursor: not-allowed;
-}
-
+/* Адаптивність для блоку цитати */
 @media (max-width: 640px) {
-  .pdca-bottom-actions-container {
+  .pdca-quote-block {
     flex-direction: column;
-    align-items: stretch;
+    text-align: center;
+    padding: 16px;
   }
-  .pdca-large-case-btn {
-    width: 100%;
+  .pdca-quote-text {
+    text-align: center;
   }
-}
-
 }

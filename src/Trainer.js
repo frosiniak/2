@@ -65,8 +65,8 @@ export default function Trainer() {
       2: sdca2,
       3: sdca3,
       4: sdca4,
-      4: sdca4,
-      4: sdca4,
+      5: sdca5,
+      6: sdca6,
     };
     const map = {
       PDCA: pdcaMap[currentCase] || pdca1,

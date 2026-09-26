@@ -31,6 +31,15 @@ export default function OodaIntro({ onStart, onBack }) {
             <button className="ooda-case-mini-btn" onClick={() => onStart(3)}>
               Кейс 3
             </button>
+<button className="ooda-case-mini-btn" onClick={() => onStart(4)}>
+Кейс 4
+</button>
+<button className="ooda-case-mini-btn" onClick={() => onStart(5)}>
+Кейс 5
+</button>
+<button className="ooda-case-mini-btn" onClick={() => onStart(6)}>
+Кейс 6
+</button>
           </div>
         </div>
 
@@ -132,6 +141,29 @@ export default function OodaIntro({ onStart, onBack }) {
           >
             Кейс 3: Раптовий вогневий контакт: розрив шаблону
           </button>
+<button 
+  className="ooda-large-case-btn" 
+  style={{ cursor: "pointer", padding: "12px 20px", fontWeight: "600", width: "100%", display: "block", background: "#1e40af", color: "#ffffff", border: "none", borderRadius: "8px" }}
+  onClick={() => onStart(4)}
+>
+  Кейс 4: Кризовий хаос: евакуація та загроза повторного удару
+</button>
+
+<button 
+  className="ooda-large-case-btn" 
+  style={{ cursor: "pointer", padding: "12px 20px", fontWeight: "600", width: "100%", display: "block", background: "#1e40af", color: "#ffffff", border: "none", borderRadius: "8px" }}
+  onClick={() => onStart(5)}
+>
+  Кейс 5: Гуманітарна криза: коридор безпеки та соціальний вибух
+</button>
+
+<button 
+  className="ooda-large-case-btn" 
+  style={{ cursor: "pointer", padding: "12px 20px", fontWeight: "600", width: "100%", display: "block", background: "#1e40af", color: "#ffffff", border: "none", borderRadius: "8px" }}
+  onClick={() => onStart(6)}
+>
+  Кейс 6: Міжвідомчий конфлікт: вилучення майна проти захисту ВПО
+</button>
         </div>
 
       </div>

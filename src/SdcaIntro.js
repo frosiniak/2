@@ -34,6 +34,15 @@ export default function SdcaIntro({ onStart, onBack, currentCase = 1 }) {
   >
     Кейс 3
   </button>
+<button className="sdca-case-mini-btn" onClick={() => onStart(4)}>
+Кейс 4
+</button>
+<button className="sdca-case-mini-btn" onClick={() => onStart(5)}>
+Кейс 5
+</button>
+<button className="sdca-case-mini-btn" onClick={() => onStart(6)}>
+Кейс 6
+</button>
 </div>
         </div>
 
@@ -84,6 +93,15 @@ export default function SdcaIntro({ onStart, onBack, currentCase = 1 }) {
           <button className="sdca-large-case-btn primary" onClick={() => onStart(3)}>
             Кейс 3: Дотримання регламенту ІТ-безпеки
           </button>
+<button className="sdca-large-case-btn primary" onClick={() => onStart(4)}>
+  Кейс 4: Утримання стандарту безпеки укриттів 
+</button>
+<button className="sdca-large-case-btn primary" onClick={() => onStart(5)}>
+  Кейс 5: Реагування на домашнє насильство проти відомчої байдужості
+</button>
+<button className="sdca-large-case-btn primary" onClick={() => onStart(6)}>
+  Кейс 6: Фіксація та збереження майна при розборі завалів
+</button>
         </div>
 
       </div>

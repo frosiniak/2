@@ -3,12 +3,21 @@ import React, { useMemo, useState } from "react";
 import pdca1 from "./scenarios/pdca1.json";
 import pdca2 from "./scenarios/pdca2.json";
 import pdca3 from "./scenarios/pdca3.json";
+import pdca4 from "./scenarios/pdca4.json";
+import pdca5 from "./scenarios/pdca5.json";
+import pdca6 from "./scenarios/pdca6.json";
 import ooda1 from "./scenarios/ooda1.json";
 import ooda2 from "./scenarios/ooda2.json";
 import ooda3 from "./scenarios/ooda3.json";
+import ooda4 from "./scenarios/ooda4.json";
+import ooda5 from "./scenarios/ooda5.json";
+import ooda6 from "./scenarios/ooda6.json";
 import sdca1 from "./scenarios/sdca1.json";
 import sdca2 from "./scenarios/sdca2.json";
 import sdca3 from "./scenarios/sdca3.json";
+import sdca4 from "./scenarios/sdca4.json";
+import sdca5 from "./scenarios/sdca5.json";
+import sdca6 from "./scenarios/sdca6.json";
 
 import OodaIntro from "./OodaIntro";
 import PdcaIntro from "./PdcaIntro";
@@ -36,12 +45,18 @@ export default function Trainer() {
       1: ooda1,
       2: ooda2,
       3: ooda3,
+      4: ooda4,
+      5: ooda5,
+      6: ooda6,
     };
 // Інтеграція нових карт сценаріїв для PDCA
     const pdcaMap = {
       1: pdca1,
       2: pdca2,
       3: pdca3,
+      4: pdca4,
+      5: pdca5,
+      6: pdca6,
     };
 
     // Інтеграція нових карт сценаріїв для SDCA
@@ -49,6 +64,9 @@ export default function Trainer() {
       1: sdca1,
       2: sdca2,
       3: sdca3,
+      4: sdca4,
+      4: sdca4,
+      4: sdca4,
     };
     const map = {
       PDCA: pdcaMap[currentCase] || pdca1,

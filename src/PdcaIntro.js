@@ -31,6 +31,15 @@ export default function PdcaIntro({ onStart, onBack }) {
             <button className="pdca-case-mini-btn" onClick={() => onStart(3)}>
               Кейс 3
             </button>
+<button className="pdca-case-mini-btn" onClick={() => onStart(4)}>
+Кейс 4
+</button>
+<button className="pdca-case-mini-btn" onClick={() => onStart(5)}>
+Кейс 5
+</button>
+<button className="pdca-case-mini-btn" onClick={() => onStart(6)}>
+Кейс 6
+</button>
           </div>
         </div>
 
@@ -88,6 +97,17 @@ export default function PdcaIntro({ onStart, onBack }) {
           <button className="pdca-large-case-btn pdca-btn-uniform" onClick={() => onStart(3)}>
             Кейс 3: Зменшення професійного вигорання та плинності кадрів
           </button>
+<button className="pdca-large-case-btn pdca-btn-uniform" onClick={() => onStart(4)}>
+  Кейс 4: Безпека громади: легалізація та вилучення зброї
+</button>
+
+<button className="pdca-large-case-btn pdca-btn-uniform" onClick={() => onStart(5)}>
+  Кейс 5: Інтеграція ветеранів: соціальна реабілітація проти формальної звітності
+</button>
+
+<button className="pdca-large-case-btn pdca-btn-uniform" onClick={() => onStart(6)}>
+  Кейс 6: Модульне містечко ВПО під тиском кадрового дефіциту поліції
+</button>
         </div>
 
       </div>
